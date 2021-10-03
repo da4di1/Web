@@ -14,10 +14,21 @@ h1, h2, h3, h4, h5, h6{
     margin:0;
 }
 
-.container{
+div.container{
     max-width: 1200;
     width: 100%;
     margin: 0 auto;
+}
+
+div > h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight:700;
+}
+
+h1 + h2{
+    text-transform: uppercase;
+    text-align: center;
 }
 
 /* INTRODUCTION */
@@ -31,9 +42,6 @@ h1, h2, h3, h4, h5, h6{
 .intro_title{
     font-family: 'RodchenkoCTT', arial;
     font-size:70px;
-    font-weight:700;
-    text-transform: uppercase;
-    text-align: center;
     color:white;
     line-height: 125%;
 }
@@ -49,7 +57,7 @@ h1, h2, h3, h4, h5, h6{
 .intro_inner{
     max-width: 880px;
     width: 100%;
-    padding-top:10%;
+    padding-top:8%;
     margin-left:2%;
 }
 
@@ -75,23 +83,24 @@ h1, h2, h3, h4, h5, h6{
     padding-left:1%;
     margin-right:1%;
     font-family: 'Lobster', arial;
-    font-size:50px;
+    font-size:55px;
     font-weight:700;
     color:white;
     text-decoration:none; 
+    float:left;
 }
 
 .nav{
     font-weight:700;
     padding-top: 1%;
-    font-size:22px;
+    font-size:22.3px;
     text-transform:uppercase;
 }
 
 .login{
     display: inline-block;
     vertical-align: top;
-    margin-right:25px;
+    margin-right:5px;
 }
 
 .log-link{
@@ -150,25 +159,23 @@ h1, h2, h3, h4, h5, h6{
 .sec_slide_inner{
     max-width: 850px;
     width: 100%;
-    padding-top:5px;
-    margin-left:524px;
+    padding-top:0.3%;
+    margin-left:27.8%;
 }
 
 .sec_slide_title{
-    padding-top:25px;
+    padding-top:1%;
     font-size:55px;
-    font-weight:700;
-    text-transform: uppercase;
-    text-align: center;
     color:black;
 }
 
 .sec_slide_subtitle{
-    padding-top:14px;
-    font-size:26px;
+    padding-top:0%;
+    font-size:24px;
+    color:black;
     text-transform: uppercase;
     text-align: center;
-    color:black;
+    list-style-type: square;
 }
 
 /* THIRD SLIDE */
@@ -182,24 +189,19 @@ h1, h2, h3, h4, h5, h6{
 .third_slide_inner{
     max-width: 850px;
     width: 100%;
-    padding-top:10px;
-    margin-left:524px;
+    padding-top:0.3%;
+    margin-left:27.8%;
 }
 
 .third_slide_title{
-    padding-top:60px;
+    padding-top:6%;
     font-size:55px;
-    font-weight:700;
-    text-transform: uppercase;
-    text-align: center;
     color:white;
 }
 
 .third_slide_subtitle{
-    padding-top:8px;
+    padding-top:1.2%;
     font-size:21px;
-    text-transform: uppercase;
-    text-align: center;
     color: white;
 }
 
@@ -212,16 +214,13 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .fourth_slide_title{
-    padding-top:67px;
+    padding-top:1.5%;
     font-size:50px;
-    font-weight:700;
-    text-transform: uppercase;
-    text-align: center;
 }
 
 /* TABLE */
 .table{
-    padding-top:23px;
+    padding-top:1.2%;
 }
 
 th, td {
@@ -257,18 +256,6 @@ input[type = text] {
     text-align: left;
   }
 
-input[type=password]{
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid rgb(127, 175, 236);
-    border-radius: 30px;
-    background-color:rgb(238, 238, 252);
-    outline: none;
-    box-shadow: 10px 4px 10px 3px #888;
-    text-align: left;
-}
-
 input[type=submit]{
     padding: 10px 10px;
     margin: 2px 0;
@@ -293,15 +280,14 @@ input[type=submit]:active {
 }
 
 .fifth_slide_title {
-    padding-top:36px;
-    text-transform: uppercase;
+    padding-top:2.5%;
     font-size: 38px;
 }
 
 .fifth_slide_subtitle {
     font-family: 'Comfortaa', cursive;
-    margin-top:0px;
-    padding-top:0px;
+    margin-top:0%;
+    padding-top:0%;
     font-size: 15px;
 }
 
@@ -336,6 +322,6 @@ form {
     text-align:center;
     max-width: 850px;
     width: 100%;
-    padding-top:0px;
-    margin-left:524px;
+    padding-top:0%;
+    margin-left:27.8%;
   }
