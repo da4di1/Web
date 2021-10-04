@@ -95,12 +95,12 @@ h1 + h2{
     padding-top: 1%;
     font-size:22.3px;
     text-transform:uppercase;
+    float:left;
 }
 
 .login{
-    display: inline-block;
-    vertical-align: top;
     margin-right:5px;
+    float:left;
 }
 
 .log-link{
@@ -118,13 +118,12 @@ h1 + h2{
 }
 
 .nav-link{
-    display: inline-block;
-    vertical-align: top;
     margin: 0 8px;
     color: white;
     text-decoration:none; 
     transition: color 0.1s linear;
     position:relative;
+    float:left;
 }
 
 .nav-link:after{
@@ -164,7 +163,7 @@ h1 + h2{
 }
 
 .sec_slide_title{
-    padding-top:1%;
+    padding-top:3%;
     font-size:55px;
     color:black;
 }
@@ -194,7 +193,7 @@ h1 + h2{
 }
 
 .third_slide_title{
-    padding-top:6%;
+    padding-top:7%;
     font-size:55px;
     color:white;
 }
@@ -214,7 +213,7 @@ h1 + h2{
 }
 
 .fourth_slide_title{
-    padding-top:1.5%;
+    padding-top:3.5%;
     font-size:50px;
 }
 
@@ -280,7 +279,7 @@ input[type=submit]:active {
 }
 
 .fifth_slide_title {
-    padding-top:2.5%;
+    padding-top:4%;
     font-size: 38px;
 }
 
