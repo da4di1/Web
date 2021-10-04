@@ -1,0 +1,88 @@
+body {
+    background-color: #191a24;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+  }
+
+.btn a{
+    display: inline-block; /* Строчно-блочный элемент */
+    background: #ffeca9; /* Цвет фона */
+    color: #102770; /* Цвет текста */
+    padding: 1rem 1.5rem; /* Поля вокруг текста */
+    text-decoration: none; /* Убираем подчёркивание */
+    border-radius: 3px; /* Скругляем уголки */
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 12px 50px 0 rgb(255 235 167 / 15%);
+   }
+
+.btn a:hover{
+  background: #ffffff; /* Цвет фона */
+}
+
+.btn {
+    text-align: center;
+    }
+  
+h1 {
+    width: 900px;
+    margin: 0 auto 8px;
+    font-family: inherit;
+    text-align: center;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 64px;
+  }
+
+h3 {
+    width: 900px;
+    margin: 0 auto 8px;
+    font-family: inherit;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 48px;
+  }
+
+.site-header {
+    height: 190px;
+    margin-bottom: 50px;
+    padding-top: 30px;
+    background-image: url(mainback.png);
+    color: #ffffff;
+    text-align: center;
+  }
+
+.site-header p {
+    width: 255px;
+    margin: 0 auto 26px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px; 
+  }
+
+.site-header h1 {
+    display: block;
+    margin: 0 auto;
+    color: #ffeca9;
+  }
+
+.team-members ul, li {
+    font-family: inherit;
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+  
+  
+  
+  
+  
