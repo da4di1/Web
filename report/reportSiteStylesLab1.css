@@ -185,4 +185,14 @@ h3 {
   img {
     width: 800px;
   }
+
+  .left-col-table ol, li {
+    text-align: left;
+    margin-left: 10px;
+    width: 600px;
+  }
+
+  .less-img {
+    width: 450px;
+  }
   
