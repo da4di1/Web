@@ -1,0 +1,285 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial;
+}
+
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/*----------HEADER----------*/
+header{
+    background: #eeeeee;
+    padding:25px 25px 2px 25px;
+}
+
+header img{
+    height:60px;
+    width:60px;
+    float: left;
+    margin-right:16px;
+}
+
+.head_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.logo{
+    color:#32a0d4;
+    font-size:25px;
+    font-weight:bold;
+}
+
+.schedule{
+    color:#300082;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.clear{
+    clear:both;
+}
+
+header .menu1{
+    display: flex;
+    justify-content: space-between;
+    margin-top:18px;
+    margin-bottom:6px;
+    flex-wrap:wrap;
+}
+
+header .menu1 a{
+    width:167px;
+    height:70px;
+    background: #3aa5d8;
+    text-align:center;
+    line-height:36px;
+    padding: 14px 0;
+    font-size:20px;
+    font-weight: bold;
+    color:white;
+    text-decoration: none;
+    border:2px solid #69dff1;
+}
+
+header .menu1 a:hover{
+    background: #0099df;
+    border:4px solid #69dff1;
+}
+
+/*----------COLOR LINE----------*/
+.red, .orange, .yellow, .green{
+    width:16.6667%;
+    height: 2px;
+    float:left;
+}
+
+.red{
+    background:red;
+}
+
+.orange{
+    background: orange;
+}
+
+.yellow{
+    background: yellow;
+}
+
+.green{
+    background: #abc933;
+}
+
+/*----------MAIN----------*/
+/*----------MAIN INFO----------*/
+main .info{
+    padding:15px 10px;
+    margin-top:20px;
+    background: #eeeeee;
+    display:flex;
+    justify-content: space-between;
+    border-bottom: 3px solid #d1d1d1;
+}
+
+.courses{
+    padding:30px 31px;
+    background:#319ed3;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items:flex-start;
+}
+
+.pros{
+    padding:10px 31px;
+    line-height:28px;
+    background:#fba000;
+}
+
+.search{
+    line-height:28px;
+    padding:10px 31px;
+    background:#cb3536;
+}
+
+.courses, .pros, .search{
+    flex:0 1 452px;
+}
+
+/*----------MAIN courses----------*/
+.courses a{
+    color:#eeeeee;
+    font-size:20px;
+    text-decoration: none;
+    padding-bottom:4px;
+    margin-bottom:17px;
+    border-bottom:1px solid #69dff1;
+}
+
+.courses a:hover{
+    font-weight:bold;
+    border-bottom:2px solid #69dff1;
+}
+
+/*----------MAIN pros----------*/
+.headline{
+    display: flex;
+    align-items:center;
+    padding-bottom:15px;
+}
+
+.headline h3{
+    font-size:24px;
+}
+
+.headline img{
+    height:40px;
+    width:40px;
+    margin-right:5px;
+}
+
+.pros_point{
+    margin-bottom:22px;
+}
+
+.pros_point img{
+    height:21px;
+    width:21px;
+    float:left;
+    margin-right:5px;
+}
+
+.pros_point h4{
+    font-size:19px;
+    margin:2px;
+}
+
+.pros_point p{
+    margin:12px;
+    font-size:20px;
+    text-indent: 10px;
+}
+
+#bold{
+    font-weight: bold;
+}
+
+/*----------MAIN search----------*/
+.search h3{
+    font-size:24px;
+    color:#fbbcaf;
+    margin-bottom:0px;
+}
+
+.search p{
+    margin-top:15px;
+    font-size:17px;
+    color:#e6a7a6;
+}
+
+.search p a{
+    color:#f97b7c;
+}
+
+.search p a:hover{
+    font-weight:bold;
+    color:blanchedalmond;
+}
+
+input[type="search"]{
+    border: 7px solid #d0b3b3;
+    border-radius: 8px;
+    font-size:16px;
+    font-weight:bold;
+    padding:8px 6px;
+    width:350px;
+}
+
+input[type="search"]:focus{
+    border: 7px solid black;
+}
+
+/*----------MAIN ARTICLE----------*/
+.article{
+    margin-top:45px;
+}
+
+.article h1{
+    text-align:center;
+    margin-bottom:12px;
+}
+
+.article img{
+    width:490px;
+    height:350px;
+    margin-right:10px;
+}
+
+.article_inner{
+    display: flex;
+    align-items: center;
+}
+
+.description{
+    font-size:25px;
+    line-height:35px;
+    flex:0 1 890px;
+    text-align:justify;
+} 
+
+/*----------FOOTER----------*/
+footer .menu2{
+    display: flex;
+    justify-content: space-between;
+    margin-top:50px;
+    margin-bottom:50px;
+    flex-wrap: wrap;
+}
+
+footer .menu2 a{
+    width:300px;
+    height:70px;
+    background: #eeeeee;
+    text-align:center;
+    line-height:36px;
+    padding: 14px 0;
+    font-size:24px;
+    font-weight: bold;
+    color:#005e71;
+    text-decoration: none;
+    border:3px solid #d2d2d2;
+}
+
+footer .menu2 a:hover{
+    background: #005e71;
+    border:5px solid black;
+    color:white;
+}
