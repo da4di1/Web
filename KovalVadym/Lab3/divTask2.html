@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Блочная верстка в HTML5</title>
+        <style>
+            div{
+                margin: 10px;
+                border: 1px solid black;
+                font-size: 20px;
+                height: 80px;
+            }
+            #header{ 
+                background-color: rgb(85, 155, 202);
+                text-align: center;
+            }
+            #sidebar{
+                background-color: rgb(83, 216, 134);
+                float: left;
+                width: 200px;
+                height: 600px;
+                margin-top: -9px;
+            }
+            #main{
+                background-color: rgb(224, 224, 224);
+                float: left;
+                width: 450px; 
+                height: 600px;
+                margin-top: -9px;
+                margin-left: -9px;
+            }
+            #sidebar2{
+                background-color: rgb(83, 216, 134);
+                margin-left: 957px; 
+                height: 600px;
+                margin-top: 20px;
+                width: 200px;
+                margin-top: -9px;
+            }
+            #footer{ 
+                background-color: rgb(85, 155, 202);
+                margin-top: -9px;
+                text-align: center;
+            }
+            .for-left-divs{
+                margin-left: 20%;
+                text-align: left;
+            }
+            .for-right-divs{
+                margin-right: 23%;
+            }
+            a{
+                text-decoration: none;
+                color:black;
+            }
+            .text{
+                text-align: center;
+                border: none;
+                padding-top: 20px;
+            }
+            h4{
+                padding-left: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header" class="for-left-divs for-right-divs">
+            <h2>БЛОЧНА ВЕРСТКА</h2>
+        </div>
+        <div id="sidebar" class="for-left-divs">
+            <h4>
+                <br>Переваги верстки блоками:
+                <ol>
+                <li>Невелика кількість коду, що знижує "вагу" сайту</li>
+                <li>Завантаження швидше, ніж у таблиць</li>
+                <li>Можна створювати сайти різної складності</li>
+                </ol>
+            </h4>
+        </div>
+        <div id="main">
+            <div class="text">
+                <h3>Блочна верстка - це відносно умовна назва способів та прийомів верстки, коли в більшості веб-сторінок для розмітки використовується CSS-властивість float, а основним "будівничим" елементом веб-сторінки є елемент div, тобто блок. 
+                    Використовуючи властивість float та елементи div та інші, можна створити структуру сторінки з декількох стовпців, як при табличній верстці, яка буде значно гнучкішою.</h3>
+            </div>
+        </div>
+        <div id="sidebar2" class="for-right-divs">
+            <h4>
+                <br>Недоліки табличної верстки:
+                <ol>
+                <li>Велика кількість коду</li>
+                <li>Не всі дизайни можна верстати таблицями</li>
+                </ol>
+            </h4>
+        </div>
+        <div id="footer" class="for-left-divs for-right-divs">
+            <a href="tableTask2.html"><h3>Перейти до табличної верстки >>></h3></a>
+        </div>
+    </body>
+</html>
