@@ -1,0 +1,10 @@
+#container{
+    width: 100%;
+    text-align: center;
+    height: 800px;
+}
+#pictures {
+    margin: auto;
+    background: url("./pictures/slide1.png");
+    background-size: cover;
+}

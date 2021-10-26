@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="Task 3.js"></script>
+        <link rel="stylesheet" href="Task 3.css" type="text/css">
+    </head>
+    <body onload="loaded()">
+        <div id="container">
+            <h1>Слайдшоу</h1>
+            <img src="/WEB lab04/pictures/slide1.png" id="pictures" width="400px" height="550px">
+        </div>
+        <div id = "StartStopButtons">
+            <input type="button" id="StartButton" onclick="changePic()" disabled value="почати"/>
+            <input type="button" onclick="stopChange()" value="зупинити"/>
+        </div>
+        <div id = "SpeedChange">
+            <Form name = "form1">
+                Задати швидкість зміни (у секундах): <input type = "text" name = "Speed" size = 20>
+                <input type="button" onclick="changeSpeed()" value="прийняти"/>
+            </Form>
+        </div>
+        <div id = "SizeButtons">
+            <p>Change size:</p>
+            <input type="button" id = "Plus" onclick="sizePlus()" value="+"/>
+            <input type="button" id = "Minus" onclick="sizeMinus()" value="-"/>
+        </div>
+    </body>
+</html>
