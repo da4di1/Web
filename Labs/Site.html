@@ -8,6 +8,13 @@
         <link href="https://uk.allfont.net/allfont.css?fonts=rodchenkoctt" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap" rel="stylesheet">
+        <script>
+            function uncheckAlert(){
+                let checkbox1 = document.getElementById('PersonalDataCheckbox');
+                if(checkbox1.checked != true)
+                    alert("Ми не зможемо зв'язатися з вами без дозволу на обробку ваших даних");
+            }
+        </script>
     </head>
     <body>
         <div class="header">
@@ -34,7 +41,7 @@
                     <h1 class="intro_title">Сайт для вивчення мов програмування</h1>
                     <h3 class="intro_subtitle">За допомогою нашого сайту ви легко зможете дізнатися, яка мова програмування є ідеальною саме для вас! 
                         А після проходження тесту перед вами з'явиться перелік курсів, щоб ви не гаяли часу та одразу почали навчання. Вивчайте більше мов, проходьте більше курсів і
-                        підіймайтесь вверх в рейтингу успішності. Покажіть усім, хто тут справжній поліглот в програмуванні! 
+                        підіймайтесь вверх в <A HREF="JavaScript:alert('Рейтинг успішності ніяк не впливає на отримані сертифікати');">рейтингу успішності*</A>. Покажіть усім, хто тут справжній поліглот в програмуванні! 
                     </h3>
                 </div>
             </div>
@@ -185,9 +192,9 @@
                         <input type=text name="name" id="full_name" placeholder="Your full name" required><br>
                         <input type=text name="email" id="email" placeholder="E-mail" required>
                         <input type=text name="number" id="number"placeholder="Phone number" required>
-                        <p class="sure_text"><input type="checkbox" name="Personal data" required> 
+                        <p class="sure_text"><input type="checkbox" id = "PersonalDataCheckbox" onclick="uncheckAlert()" name="Personal data" required> 
                         Я погоджуюсь на обробку особистих данних</p>
-                        <input type="submit" value="Надіслати">
+                        <input type="submit" id="ContactsSubmitButton" value="Надіслати">
                     </form>
                 </div>
             </div>
