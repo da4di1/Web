@@ -93,6 +93,7 @@ h1 + h2{
     font-size:23px;
     text-transform:uppercase;
     float:left;
+    position: relative;
 }
 
 .login{
@@ -119,7 +120,7 @@ h1 + h2{
     background-color:#adb8cc;
 }
 
-.nav-link{
+.nav-link, .nav-link2{
     margin: 0 8px;
     color: white;
     text-decoration:none; 
@@ -128,8 +129,16 @@ h1 + h2{
     float:left;
 }
 
+.nav-link2{
+    color: #fff5ee;
+}
+
+.courses_button{
+    cursor:pointer;
+}
+
 .courses_list{
-    top:55px;
+    top:35px;
     margin-left: 7px;
     position:absolute;
     border: 3px solid gray;
@@ -146,8 +155,7 @@ ul._active{
     color: #adb8cc;
 }
 
-
-.nav-link:after{
+.nav-link:after, .nav-link2:after{
     display:block;
     content: "";
     width: 100%;
@@ -158,6 +166,10 @@ ul._active{
     z-index:1;
     opacity:0;
     transition: opacity 0.1s linear;
+}
+
+.nav-link2:after{
+    opacity:1;
 }
 
 .nav-link:hover:after{
@@ -290,6 +302,7 @@ input[type=submit]{
     text-align: left;
     cursor: pointer;
     font-size:20px;
+    margin-bottom: 12px;
 }
 
 input[type=submit]:hover {background-color: #333f33}
@@ -332,11 +345,13 @@ input[type=submit]:active {
 
 form {
     padding-top:0px;
+    
 }
 
 .sure_text{
     font-size:17px;
-    text-decoration: underline
+    text-decoration: underline;
+    margin-bottom:6px;
 }
 
 .fifth_slide_inner{

@@ -1,15 +1,11 @@
-"use strict";
+let flag = true;
 
-
-function list(event){
-    if(event.target.closest(".courses_button")){
-        menu.classList.toggle("_active");
+$(".courses_button").click(function(){
+    $('.courses_list').toggleClass("_active");
+    if (flag){
+        $('div.nav-link').toggleClass('nav-link nav-link2');
+    }else{
+        $('div.nav-link2').toggleClass('nav-link2 nav-link');
     }
-    if(!event.target.closest(".courses_button")){
-        menu.classList.remove("_active");
-    }
-}
-
-
-const menu = document.querySelector(".courses_list");
-document.addEventListener("click", list);
+    flag = !flag;
+});
