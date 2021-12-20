@@ -52,7 +52,7 @@ session_start();
                         </ul>
                         <a class="nav-link" href = "https://www.instagram.com/da4di1/?hl=ru">Підбери курс</a>
                         <a class="nav-link" href = "./tabs/answers/Answers.php">Відповіді на питання</a>
-                        <a class="nav-link" href = "https://www.instagram.com/da4di1/?hl=ru">Рейтинг активності</a>
+                        <a class="nav-link" href = "./tabs/activity rating/rating.php">Рейтинг активності</a>
                     </nav>
                 </div>
             </div>
