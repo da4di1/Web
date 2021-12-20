@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JS Task</title>
+        <style>
+           
+        </style>
+    </head>
+
+    <style>
+        #myChart {
+            height: 500px;
+            width: 500px;
+        }
+
+        .diagramOptions {
+            text-align: center;
+            margin: 100px;
+            margin-top: 20px;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            margin: 10px;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        ul, li {
+            list-style: none;
+        }
+
+
+
+    </style>
+
+    <body>
+        <!-- Завдання №1: Створити одновимірний массив. Знайти найбільший серед від’ємних та найменший серед додатних елементів масиву. 
+            Упорядкувати масив у порядку зменшення методом вибору. Надрукувати вхідний та вихідний масив. -->
+        <script>
+            let array = [-5, -1, 2, 63, 13, 104, -103, -11, 20, 55, -42];
+            var smallestPlus = Infinity;
+            var biggestMinus = -Infinity;
+            for (i = 0; i < array.length; i++)
+            {
+                if (array[i] < 0 && array[i] > biggestMinus)
+                {
+                    biggestMinus = array[i];
+                }
+
+                else if (array[i] > 0 && array[i] < smallestPlus)
+                {
+                    smallestPlus = array[i];
+                }
+            }
+            
+            console.log(smallestPlus);
+            console.log(biggestMinus);
+            var nowArray = "";
+            for (i = 0; i < array.length; i++)
+            {
+                nowArray += array[i];
+                nowArray += " ";
+            }
+            console.log(nowArray);
+            selectionSort(array);
+            nowArray = "";
+            for (i = 0; i < array.length; i++)
+            {
+                nowArray += array[i];
+                nowArray += " ";
+            }
+            console.log(nowArray);
+
+            function selectionSort(inputArr) { 
+                let n = inputArr.length;
+                    
+                for(let i = 0; i < n; i++) {
+                    // Знаходимо найбільше число у правій частині масиву
+                    let max = i;
+                    for (let j = i; j < n; j++) {
+                        if(inputArr[j] > inputArr[max]) {
+                            max = j; 
+                        }
+                    }
+                    if (max != i) {
+                        // Замінюємо елементи
+                        let tmp = inputArr[i]; 
+                        inputArr[i] = inputArr[max];
+                        inputArr[max] = tmp;      
+                    }
+                }
+                return inputArr;
+            }
+        </script>
+
+        <!-- Завдання №2: Гістограма: Реалізувати можливість уведення довільної кількості чисел у елементи
+            форми та побудови нормалізованої за максимальним числом гістограми значень цих полів.   -->
+            <h1>Заповніть форму для побудови гістограми:</h1>
+            <h2>Уведіть інформацію у вигляді "назва стовпця-значення":
+            <br>(Якщо потрібно менше стовпців, то у зайві впишіть нулі)</h2>
+            <form action="/my-handling-form-page" method="post">
+                <ul>
+                  <li>Column 1<br>
+                    <label for="title">Title:</label>
+                    <input type="text" id="title1" name="col_title">
+                    <label for="data">Data:</label>
+                    <input type="number" id="data1" name="col_data">
+                  </li>
+                  <br><li>Column 2<br>
+                    <label for="title">Title:</label>
+                    <input type="text" id="title2" name="col_title">
+                    <label for="data">Data:</label>
+                    <input type="number" id="data2" name="col_data">
+                  </li>
+                  <br><li>Column 3<br>
+                    <label for="title">Title:</label>
+                    <input type="text" id="title3" name="col_title">
+                    <label for="data">Data:</label>
+                    <input type="number" id="data3" name="col_data">
+                  </li>
+                  <br><li>Column 4<br>
+                    <label for="title">Title:</label>
+                    <input type="text" id="title4" name="col_title">
+                    <label for="data">Data:</label>
+                    <input type="number" id="data4" name="col_data">
+                  </li>
+                  <br><li>Column 5<br>
+                    <label for="title">Title:</label>
+                    <input type="text" id="title5" name="col_title">
+                    <label for="data">Data:</label>
+                    <input type="number" id="data5" name="col_data">
+                  </li>
+                  <br><li>Column 6<br>
+                    <label for="title">Title:</label>
+                    <input type="text" id="title6" name="col_title">
+                    <label for="data">Data:</label>
+                    <input type="number" id="data6" name="col_data">
+                  </li>
+                </ul>
+                <input type="button" value="Make" id="makeDia" onclick="someFunc()">
+              </form>
+
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <canvas id="myChart"></canvas>
+            <script>
+                function someFunc()
+                {
+                let titlesArray = [];
+                let dataArray = [];
+                
+                titlesArray[0] = document.getElementById("title1").value;
+                titlesArray[1] = document.getElementById("title2").value;
+                titlesArray[2] = document.getElementById("title3").value;
+                titlesArray[3] = document.getElementById("title4").value;
+                titlesArray[4] = document.getElementById("title5").value;
+                titlesArray[5] = document.getElementById("title6").value;
+                dataArray[0] = document.getElementById("data1").value;
+                dataArray[1] = document.getElementById("data2").value;
+                dataArray[2] = document.getElementById("data3").value;
+                dataArray[3] = document.getElementById("data4").value;
+                dataArray[4] = document.getElementById("data5").value;
+                dataArray[5] = document.getElementById("data6").value;
+
+                for (let i = 0; i < titlesArray.length; i++)
+                {
+                    if (titlesArray[i] == 0)
+                    {
+                        titlesArray.splice(i, 1);
+                    }
+                }
+
+                for (let i = 0; i < dataArray.length; i++)
+                {
+                    if (dataArray[i] == 0)
+                    {
+                        dataArray.splice(i, 1);
+                    }
+                }
+                
+                    const ctx = document.getElementById('myChart').getContext('2d');
+                    const myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: titlesArray,
+                        datasets: [{
+                            label: 'Rating',
+                            data: dataArray,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                    });
+                    }   
+                
+            </script>
+    </body>
+</html>
