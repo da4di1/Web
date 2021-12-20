@@ -50,7 +50,7 @@ $course = mysqli_fetch_all($course);
                         </ul>
                         <a class="nav-link" href = "https://www.instagram.com/da4di1/?hl=ru">Підбери курс</a>
                         <a class="nav-link" href = "../answers/Answers.php">Відповіді на питання</a>
-                        <a class="nav-link" href = "https://www.instagram.com/da4di1/?hl=ru">Рейтинг активності</a>
+                        <a class="nav-link" href = "../activity rating/rating.php">Рейтинг активності</a>
                     </nav>
                 </div>
             </div>
@@ -87,13 +87,23 @@ $course = mysqli_fetch_all($course);
                         } echo '</li>';
                         echo '<li><span class="bold">Тривалість курсу:</span> ' . $course[$i][5] .  ' місяців,</li>';
                         echo '<li><span class="bold">Вхідний рівень знань:</span> ' . $course[$i][3] . ',</li>';
-                        echo '<li><span class="bold">Рейтинг:</span> ' . $course[$i][4] . '/5.</li>';
-                    echo '</ul>
-                    <form method="post" autocomplete="off" action="">
+                        echo '<li><span class="bold">Рейтинг:</span> ' . $course[$i][4] . '/5.</li>
+                    </ul>';
+                    if ($_SESSION['user']){
+                    echo 
+                    '<form method="post" autocomplete="off" action="">
                     <input type = "checkbox" value = "' . $course_id .'" name = "Course[]" required><span id = "confirm">Я підтверджую реєстрацію на курс.</span>
                     <input type = "submit" value = "Зареєструватися">
-                    </form>
-                </div>
+                    </form>';
+                    }else{
+                    echo 
+                    '<form method="post" autocomplete="off" action="../../Login.php">
+                    <input type = "checkbox" value = "' . $course_id .'" name = "Course[]" required><span id = "confirm">Я підтверджую реєстрацію на курс.</span>
+                    <input type = "submit" value = "Зареєструватися">
+                    </form>'; 
+                    }
+                echo
+                '</div>
             </div>
         </div>';
         }
