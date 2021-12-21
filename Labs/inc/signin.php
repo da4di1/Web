@@ -16,13 +16,6 @@ if (mysqli_num_rows($check_user) != 0){
         "id" => $user['Id'],
         "username" => $user['Username'],
         "email" => $user['Email'],
-        "courses" => [
-            "sharp" => [],
-            "pluses" => [],
-            "java" => [],
-            "python" => [],
-            "js" => []
-        ]
     ];
 
     header('Location: ../index.php');
