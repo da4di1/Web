@@ -50,7 +50,7 @@ session_start();
                             <li><a href = "./tabs/catalogue/python.php" class="courses_link">Python</a></li>
                             <li><a href = "./tabs/catalogue/js.php" class="courses_link">JavaScript</a></li>
                         </ul>
-                        <a class="nav-link" href = "https://www.instagram.com/da4di1/?hl=ru">Підбери курс</a>
+                        <a class="nav-link" href = "./tabs/quiz/quiz.php">Підбери курс</a>
                         <a class="nav-link" href = "./tabs/answers/Answers.php">Відповіді на питання</a>
                         <a class="nav-link" href = "./tabs/activity rating/rating.php">Рейтинг активності</a>
                     </nav>
