@@ -18,7 +18,6 @@ require_once '../../inc/connect.php';
         <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://yastatic.net/share2/share.js"></script>
-        </script>
     </head>
     <body>
         <div class="header">
@@ -46,9 +45,9 @@ require_once '../../inc/connect.php';
                             <li><a href = "../catalogue/python.php" class="courses_link">Python</a></li>
                             <li><a href = "../catalogue/js.php" class="courses_link">JavaScript</a></li>
                         </ul>
-                        <a class="nav-link" href = "https://www.instagram.com/da4di1/?hl=ru">Підбери курс</a>
+                        <a class="nav-link" href = "../quiz/quiz.php">Підбери курс</a>
                         <a class="nav-link" href = "../answers/Answers.php">Відповіді на питання</a>
-                        <a class="nav-link" href = "./rating.php">Рейтинг активності</a>
+                        <a style = "color: #fff5ee" href = "./rating.php">Рейтинг активності</a>
                     </nav>
                 </div>
             </div>
