@@ -20,7 +20,6 @@ $course = mysqli_fetch_all($course);
         <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://yastatic.net/share2/share.js"></script>
-        </script>
     </head>
     <body>
         <div class="header">
@@ -40,7 +39,7 @@ $course = mysqli_fetch_all($course);
                         ?>
                     </div>
                     <nav class="nav">
-                        <div class="nav-link courses_button">Каталог курсів</div>
+                        <div style = "color: #fff5ee" class="nav-link courses_button">Каталог курсів</div>
                         <ul hidden class="courses_list">
                             <li><a href = "./csharp.php" class="courses_link">C#</a></li>
                             <li><a href = "./cpluses.php" class="courses_link">C++</a></li>
@@ -48,7 +47,7 @@ $course = mysqli_fetch_all($course);
                             <li><a href = "./python.php" class="courses_link">Python</a></li>
                             <li><a href = "./js.php" class="courses_link">JavaScript</a></li>
                         </ul>
-                        <a class="nav-link" href = "https://www.instagram.com/da4di1/?hl=ru">Підбери курс</a>
+                        <a class="nav-link" href = "../quiz/quiz.php">Підбери курс</a>
                         <a class="nav-link" href = "../answers/Answers.php">Відповіді на питання</a>
                         <a class="nav-link" href = "../activity rating/rating.php">Рейтинг активності</a>
                     </nav>
@@ -86,14 +85,43 @@ $course = mysqli_fetch_all($course);
                             echo '' . $teacher[$k][1] . ', ';
                         } echo '</li>';
                         echo '<li><span class="bold">Тривалість курсу:</span> ' . $course[$i][5] .  ' місяців,</li>';
-                        echo '<li><span class="bold">Вхідний рівень знань:</span> середній(' . $course[$i][3] . '),</li>';
-                        echo '<li><span class="bold">Рейтинг:</span> ' . $course[$i][4] . '/5.</li>';
-                    echo '</ul>
-                    <form method="post" autocomplete="off" action="">
-                    <input type = "checkbox" value = "' . $course_id .'" name = "Course[]" required><span id = "confirm">Я підтверджую реєстрацію на курс.</span>
-                    <input type = "submit" value = "Зареєструватися">
-                    </form>
-                </div>
+                        echo '<li><span class="bold">Вхідний рівень знань:</span> ' . $course[$i][3] . ',</li>';
+                        echo '<li><span class="bold">Рейтинг:</span> ' . $course[$i][4] . '/5.</li>
+                    </ul>';
+                    
+                    $userId = $_SESSION['user']['id'];
+                    $registered = mysqli_query($connect, "SELECT UserId FROM `coursesregistration` WHERE `CourseId` = '$course_id'");
+                    $registered = mysqli_fetch_all($registered);
+
+                    $flag = false;
+                    for ($k = 0; $k < count($registered); $k++){
+                        if (in_array($userId, $registered[$k])){
+                            $flag = true;
+                        }
+                    }
+                    if ($_SESSION['user']){       
+                        if(!$flag){
+                        echo 
+                        '<form method="post" autocomplete="off" action="../../inc/regoncourse.php">
+                        <input type = "checkbox" value = "' . $course_id .'" name = "Course" required><span id = "confirm">Я підтверджую реєстрацію на курс.</span>
+                        <input type = "submit" value = "Зареєструватися">
+                        </form>';
+                        }else{
+                        echo 
+                        '<form method="post" autocomplete="off" action="">
+                        <input type = "checkbox" value = "' . $course_id .'" name = "Course" required><span id = "confirm">Я підтверджую реєстрацію на курс.</span>
+                        <input style = "margin-left: 150px; border-color:orange; color:orange" type = "submit" value = "Ви вже зареєструвалися" disabled>
+                        </form>'; 
+                        }
+                    }else{
+                        echo 
+                        '<form method="post" autocomplete="off" action="../../Login.php">
+                        <input type = "checkbox" value = "' . $course_id .'" name = "Course" required><span id = "confirm">Я підтверджую реєстрацію на курс.</span>
+                        <input type = "submit" value = "Зареєструватися">
+                        </form>'; 
+                    }
+                echo
+                '</div>
             </div>
         </div>';
         }
