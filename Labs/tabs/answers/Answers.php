@@ -43,8 +43,8 @@ session_start();
                             <li><a href = "../catalogue/python.php" class="courses_link">Python</a></li>
                             <li><a href = "../catalogue/js.php" class="courses_link">JavaScript</a></li>
                         </ul>
-                        <a class="nav-link" href = "https://www.instagram.com/da4di1/?hl=ru">Підбери курс</a>
-                        <a class="nav-link" href = "./Answers.php">Відповіді на питання</a>
+                        <a class="nav-link" href = "../quiz/quiz.php">Підбери курс</a>
+                        <a style = "color: #fff5ee" class="nav-link" href = "./Answers.php">Відповіді на питання</a>
                         <a class="nav-link" href = "../activity rating/rating.php">Рейтинг активності</a>
                     </nav>
                 </div>
